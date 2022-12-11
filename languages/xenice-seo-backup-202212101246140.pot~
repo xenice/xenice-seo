@@ -1,0 +1,101 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Xenice SEO\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-03 09:42+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.3; wp-6.1\n"
+"X-Domain: xenice-seo"
+
+#: Config.php:33
+msgid "Default post description"
+msgstr ""
+
+#: Config.php:40
+msgid "Default post keywords"
+msgstr ""
+
+#: Config.php:92 Meta.php:48
+msgid "Description"
+msgstr ""
+
+#: Config.php:55
+msgid "Display the post description edit box"
+msgstr ""
+
+#: Config.php:62
+msgid "Display the post keywords edit box"
+msgstr ""
+
+#: Config.php:48
+msgid "Display the post title edit box"
+msgstr ""
+
+#: Config.php:29
+msgid "General"
+msgstr ""
+
+#: Config.php:82
+msgid "Home"
+msgstr ""
+
+#: Config.php:99 Meta.php:59
+msgid "Keywords"
+msgstr ""
+
+#: Config.php:54
+msgid "Post description"
+msgstr ""
+
+#: Config.php:61
+msgid "Post keywords"
+msgstr ""
+
+#: Config.php:47
+msgid "Post title"
+msgstr ""
+
+#: xenice-seo.php:81
+msgid "SEO"
+msgstr ""
+
+#: Config.php:24 Config.php:25 Meta.php:22
+msgid "SEO Settings"
+msgstr ""
+
+#: xenice-seo.php:89
+msgid "Settings"
+msgstr ""
+
+#. Description of the plugin
+msgid "Simple SEO"
+msgstr ""
+
+#: Config.php:86 Meta.php:38
+msgid "Title"
+msgstr ""
+
+#: Config.php:68
+msgid "Title Separator"
+msgstr ""
+
+#: Config.php:34
+msgid "Use the post excerpt as the default post description"
+msgstr ""
+
+#: Config.php:41
+msgid "Use the post tags as the default post keywords"
+msgstr ""
+
+#. Name of the plugin
+msgid "Xenice SEO"
+msgstr ""

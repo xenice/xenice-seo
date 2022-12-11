@@ -1,0 +1,55 @@
+/*
+ * Simple Wp Sitemap xml css
+ */
+
+sitemapindex,urlset{
+    display: block;
+    max-width: 1080px;
+    margin: 10px auto;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 13px;
+}
+sitemap,url{
+    display: block;
+    overflow: auto;
+    padding: 5px;
+    word-wrap: break-word;
+}
+sitemap:nth-child(2n+1),url:nth-child(2n+1){
+    background: #f8f8f8;
+}
+loc{
+    display: inline-block;
+    width: 55%;
+}
+lastmod{
+    display: inline-block;
+    width: 25%;
+}
+changefreq{
+    display: inline-block;
+    width: 10%;
+}
+priority{
+    display: inline;
+}
+@media (max-width: 960px){
+    sitemapindex,urlset{
+        font-size: 12px;
+    }
+    loc,lastmod,changefreq,priority{
+        max-width: 100%;
+        width: 100%;
+        float: left;
+    }
+}
+@media (max-device-width: 500px){
+    sitemapindex,urlset{
+        zoom: 2;
+    }
+    loc,lastmod,changefreq,priority{
+        max-width: 100%;
+        width: 100%;
+        float: left;
+    }
+}
