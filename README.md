@@ -1,5 +1,3 @@
-中文|[English](README.md)
-
 # WordPress插件: xenice-seo
 > 简单的WordPress SEO插件，为网站添加SEO标题、SEO关键词、SEO元描述、网站地图。  
 
