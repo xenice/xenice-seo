@@ -3,7 +3,7 @@
 
 ### 缩略图
 
-[https://www.xenice.com/article/xenice-seo](https://www.xenice.com/article/xenice-seo)
+[https://www.xenice.com/plugins/xenice-seo](https://www.xenice.com/plugins/xenice-seo)
 
 ![xenice-seo](https://raw.githubusercontent.com/xenice/xenice-post-widgets/master/screenshot_cn.png)
 
