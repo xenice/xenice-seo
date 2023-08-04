@@ -12,20 +12,44 @@ class SitemapController
     public function index($n = 0)
     {
         $dir = WP_CONTENT_DIR . '/uploads/xenice/seo/sitemap';
+        if(is_dir($dir) && !empty($_GET['refresh'])){
+            $this->deleteDir($dir);
+            echo "The old sitemap is remove<br/>";
+        }
+        
         $this->dir = $dir;
         is_dir($dir) || mkdir($dir, 0777, true);
         
         // Make sure to run a single process
         $lock = $dir . '/request.lock';
         if(is_file($lock)){
-            echo "The sitemap is being generated, please refresh the page later ...";
+            // Show sitemap
+            $index = $dir . '/sitemap.xml';
+            $cache = new Cache($dir);
+            if(is_file($index)){
+                $file = $n?'sitemap-'.$n.'.xml':'sitemap.xml';
+                $file = $dir . '/'. $file;
+                if(is_file($file)){
+                    header("Content-type: text/xml");
+                    header('HTTP/1.1 200 OK');
+                    echo file_get_contents($file);
+                }
+                else{
+                    header("HTTP/1.1 404 Not Found");
+                    header("Status: 404 Not Found");
+                }
+            }
+            else{
+                echo "The sitemap is being generated, please refresh the page later ...";
+            }
+            
             return;
         }
 
         // Show sitemap
         $index = $dir . '/sitemap.xml';
         $cache = new Cache($dir);
-        if(is_file($index) && $cache->get('sitemap')){
+        if(is_file($index)){
             $file = $n?'sitemap-'.$n.'.xml':'sitemap.xml';
             $file = $dir . '/'. $file;
             if(is_file($file)){
@@ -37,11 +61,16 @@ class SitemapController
                 header("HTTP/1.1 404 Not Found");
                 header("Status: 404 Not Found");
             }
-            return;
+            
+            if($cache->isValid('sitemap')){
+                return;
+            }
+        }
+        else{
+            echo "Start generating sitemap ...";
         }
         
         // Create sitemap
-        echo "Start generating sitemap ...";
         file_put_contents($lock, getmypid());
         fastcgi_finish_request();
         set_time_limit(0);
@@ -190,4 +219,32 @@ class SitemapController
         fwrite($fp, "</sitemapindex>\r\n");
         fclose($fp);
     }
+    
+    function deleteDir($path) {
+
+        if (is_dir($path)) {
+            //扫描一个目录内的所有目录和文件并返回数组
+            $dirs = scandir($path);
+    
+            foreach ($dirs as $dir) {
+                //排除目录中的当前目录(.)和上一级目录(..)
+                if ($dir != '.' && $dir != '..') {
+                    //如果是目录则递归子目录，继续操作
+                    $sonDir = $path.'/'.$dir;
+                    if (is_dir($sonDir)) {
+                        //递归删除
+                        $this->deleteDir($sonDir);
+    
+                        //目录内的子目录和文件删除后删除空目录
+                        @rmdir($sonDir);
+                    } else {
+    
+                        //如果是文件直接删除
+                        @unlink($sonDir);
+                    }
+                }
+            }
+            @rmdir($path);
+    }
+}
 }

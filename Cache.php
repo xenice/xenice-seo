@@ -53,6 +53,17 @@ class Cache
         return '';
     }
     
+    public function isValid($key)
+    {
+        if(isset($this->data[$key])){
+            $time = $this->data[$key];
+            $file = $this->dir . md5($key);
+            if(($time == 0 || $time > time()) && is_file($file)){
+                return true;
+            }
+        }
+    }
+    
     public function keys()
     {
         return array_keys($this->data);

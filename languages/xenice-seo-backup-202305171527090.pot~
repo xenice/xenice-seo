@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xenice SEO\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-17 07:27+0000\n"
+"POT-Creation-Date: 2023-05-17 07:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -72,7 +72,11 @@ msgstr ""
 msgid "Links"
 msgstr ""
 
-#: Config.php:41 Config.php:134 Meta.php:56 TaxMeta.php:53
+#: TaxMeta.php:53
+msgid "Meta decription"
+msgstr ""
+
+#: Config.php:41 Config.php:134 Meta.php:56
 msgid "Meta description"
 msgstr ""
 

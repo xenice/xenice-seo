@@ -79,6 +79,21 @@ js;
         return $str;
     }
     
+    private function radios($field)
+    {
+        $tips = $field['tips']??[];
+        $str = '';
+        foreach ( $field['opts'] as $key => $val ){
+            if($key == $field['value']){
+                $str .= sprintf( '<div style="margin-bottom:20px"><label><input type="radio" name="%s" value="%s" checked />%s</label><div style="padding:3px 5px;width:fit-content;margin-top:8px;background-color:#ddd">%s</div></div>', $field['id'], $key, $val, $tips[$key]??'');
+            }
+            else{
+                $str .= sprintf( '<div style="margin-bottom:20px"><label><input type="radio" name="%s" value="%s" />%s</label><div style="padding:3px 5px;width:fit-content;margin-top:8px;background-color:#ddd">%s</div></div>', $field['id'], $key, $val, $tips[$key]??'');
+            }
+        }
+        return $str;
+    }
+    
     private function radiotab($field)
     {
         $str = '';

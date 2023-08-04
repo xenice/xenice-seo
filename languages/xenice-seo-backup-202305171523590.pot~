@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xenice SEO\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-03 08:36+0000\n"
+"POT-Creation-Date: 2022-12-10 12:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,7 +16,15 @@ msgstr ""
 "X-Loco-Version: 2.6.3; wp-6.1\n"
 "X-Domain: xenice-seo"
 
-#: Config.php:92
+#: Config.php:33
+msgid "Default post description"
+msgstr ""
+
+#: Config.php:40
+msgid "Default post keywords"
+msgstr ""
+
+#: Config.php:99 Meta.php:48
 msgid "Description"
 msgstr ""
 
@@ -32,15 +40,24 @@ msgstr ""
 msgid "Display the post title edit box"
 msgstr ""
 
+#: Config.php:78
+msgid "Enable sitemap"
+msgstr ""
+
 #: Config.php:29
 msgid "General"
 msgstr ""
 
-#: Config.php:82
+#: Config.php:89
 msgid "Home"
 msgstr ""
 
-#: Config.php:99
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://www.xenice.com"
+msgstr ""
+
+#: Config.php:106 Meta.php:59
 msgid "Keywords"
 msgstr ""
 
@@ -48,35 +65,35 @@ msgstr ""
 msgid "Post description"
 msgstr ""
 
-#: Config.php:33
-msgid "Post description default"
-msgstr ""
-
 #: Config.php:61
 msgid "Post keywords"
-msgstr ""
-
-#: Config.php:40
-msgid "Post keywords default"
 msgstr ""
 
 #: Config.php:47
 msgid "Post title"
 msgstr ""
 
-#: xenice-seo.php:79
+#: xenice-seo.php:81
 msgid "SEO"
 msgstr ""
 
-#: Config.php:24 Config.php:25
+#: Config.php:24 Config.php:25 Meta.php:22
 msgid "SEO Settings"
+msgstr ""
+
+#: xenice-seo.php:89
+msgid "Settings"
 msgstr ""
 
 #. Description of the plugin
 msgid "Simple SEO"
 msgstr ""
 
-#: Config.php:86
+#: Config.php:79
+msgid "Sitemap url:"
+msgstr ""
+
+#: Config.php:93 Meta.php:38
 msgid "Title"
 msgstr ""
 
@@ -85,11 +102,15 @@ msgid "Title Separator"
 msgstr ""
 
 #: Config.php:34
-msgid "Use the post excerpt as the post description default"
+msgid "Use the post excerpt as the default post description"
 msgstr ""
 
 #: Config.php:41
-msgid "Use the post tags as the post keywords default"
+msgid "Use the post tags as the default post keywords"
+msgstr ""
+
+#. Author of the plugin
+msgid "Xenice"
 msgstr ""
 
 #. Name of the plugin

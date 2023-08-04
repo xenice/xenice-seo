@@ -2,6 +2,7 @@
 
 namespace xenice\seo;
 
+use xenice\seo\models\Records;
 
 class Meta extends Box
 {
@@ -12,14 +13,14 @@ class Meta extends Box
     
     public function __construct()
 	{
-	   $this->enable_post_title = get('enable_post_title');
-	   $this->enable_post_description = get('enable_post_description');
-	   $this->enable_post_keywords = get('enable_post_keywords');
+	   $this->enable_post_title = get('enable_seo_title');
+	   $this->enable_post_description = get('enable_meta_description');
+	   $this->enable_post_keywords = get('enable_meta_keywords');
 	   
 	   if($this->enable_post_title || $this->enable_post_description || $this->enable_post_keywords){
 	        parent::__construct([
     	       "key"=>"seo",
-    	       "name"=>__('SEO Settings', 'xenice-seo'),
+    	       "name"=>'Xenice SEO', 'xenice-seo',
     	       'type'=>['post','page'],
     	   ]);
 	   }
@@ -29,38 +30,45 @@ class Meta extends Box
 	
 	public function handle($id, $options)
 	{
-	    $fields = get_post_meta($id, 'xenice-seo', true);
+	    $variable = '
+	    <div style="display:flex;gap: 10px;"><div>'.__('Variables:', 'xenice-seo').'</div>
+              <div style="color:blue">[post-title]</div>
+              <div style="color:blue">[separator]</div>
+              <div style="color:blue">[site-title]</div>
+          </div>
+	    ';
+	    $row = (new Records)->where('object_id', $id)->and('type', 'post')->first();
 	    
 	    $options = [];
 	    if($this->enable_post_title){
 	        $options[] = [
-                'id'   => 'title',
-                'name' => __('Title', 'xenice-seo'),
-                'desc' => '',
+                'id'   => 'seo_title',
+                'name' => __('Seo title', 'xenice-seo'),
+                'desc' => __('Set the seo title. Display the default title when empty.', 'xenice-seo') . $variable,
                 'type'  => 'text',
-                'value' => $fields['title']??''
+                'value' => $row['seo_title']??''
             ];
 	    }
-	    
+	   
 	    if($this->enable_post_description){
 	        $options[] = [
-                'id'   => 'description',
-                'name' => __('Description', 'xenice-seo'),
-                'desc' => '',
+                'id'   => 'meta_description',
+                'name' => __('Meta description', 'xenice-seo'),
+                'desc' =>  __('Set the meta description.', 'xenice-seo'),
                 'rows' =>4,
                 'type'  => 'textarea',
-                'value' => $fields['description']??''
+                'value' => $row['meta_description']??''
             ];
 	    }
 	    
 	    if($this->enable_post_keywords){
 	        $options[] = [
-                'id'   => 'keywords',
-                'name' => __('Keywords', 'xenice-seo'),
-                'desc' => '',
+                'id'   => 'meta_keywords',
+                'name' => __('Meta keywords', 'xenice-seo'),
+                'desc' => __('Set the meta keywords. Multiple are separated by commas.', 'xenice-seo'),
                 'rows' =>4,
                 'type'  => 'textarea',
-                'value' => $fields['keywords']??''
+                'value' => $row['meta_keywords']??''
             ];
 	    }
 	    
@@ -70,7 +78,20 @@ class Meta extends Box
 	
 	public function update($post_id, $fields)
     {
-        update_post_meta($post_id, 'xenice-seo', $fields);
+        $data = [];
+        isset($fields['seo_title']) && $data['seo_title'] = $fields['seo_title'];
+        isset($fields['meta_description']) && $data['meta_description'] = $fields['meta_description'];
+        isset($fields['meta_keywords']) && $data['meta_keywords'] = $fields['meta_keywords'];
+        $records = new Records;
+        $row = $records->where('object_id', $post_id)->and('type', 'post')->first();
+        if($row){
+            $records->where('object_id', $post_id)->update($data);
+        }
+        else{
+            $data['object_id'] = $post_id;
+            $data['type'] = 'post';
+            $records->insert($data);
+        }
     }
     
     

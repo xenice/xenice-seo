@@ -146,7 +146,7 @@ class Admin
             // show tabs
             if(isset($option['tabs'])){
                
-                $page_url = admin_url( $_SERVER['PHP_SELF'] . '?page=' . $_GET['page']);
+                $page_url = home_url( $_SERVER['PHP_SELF'] . '?page=' . $_GET['page']);
                 $current_tab = $_GET['tab']??$option['tabs'][0]['id'];
                 $str = '<nav class="nav-tab-wrapper">';
                 foreach($option['tabs'] as $key => $tab){
