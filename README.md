@@ -20,23 +20,14 @@
 
 ### 缩略图
 
-[https://www.xenice.com/wp-content/uploads/2023/05/xenice-seo-1.png)
-
 ![xenice-seo-1](https://www.xenice.com/wp-content/uploads/2023/05/xenice-seo-1.png)
-
-[https://www.xenice.com/wp-content/uploads/2023/05/xenice-seo-4.png)
 
 ![xenice-seo-4](https://www.xenice.com/wp-content/uploads/2023/05/xenice-seo-4.png)
 
-[https://www.xenice.com/wp-content/uploads/2023/05/xenice-seo-2.png)
-
 ![xenice-seo-2](https://www.xenice.com/wp-content/uploads/2023/05/xenice-seo-2.png)
-
-[https://www.xenice.com/wp-content/uploads/2023/05/xenice-seo-3.png)
 
 ![xenice-seo-3](https://www.xenice.com/wp-content/uploads/2023/05/xenice-seo-3.png)
 
-）
 
 ### 插件特色
 
