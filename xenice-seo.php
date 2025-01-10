@@ -4,7 +4,7 @@
  * Plugin Name: Xenice SEO
  * Plugin URI: https://www.xenice.com
  * Description: Simple SEO 
- * Version: 1.8.3
+ * Version: 1.8.4
  * Author: Xenice
  * Author URI: https://www.xenice.com
  * Text Domain: xenice-seo
