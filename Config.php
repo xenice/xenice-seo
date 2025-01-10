@@ -30,6 +30,13 @@ class Config extends Options
                     'title' => __('General', 'xenice-seo'),
                     'fields'=>[
                         [
+                            'id'   => 'enable_focus_keywords',
+                            'name' => __('Focus keywords', 'xenice-seo'),
+                            'label' => __('Display the focus keywords edit box', 'xenice-seo'),
+                            'type'  => 'checkbox',
+                            'value' => true,
+                        ],
+                        [
                             'id'   => 'enable_seo_title',
                             'name' => __('SEO title', 'xenice-seo'),
                             'label' => __('Display the SEO title edit box', 'xenice-seo'),
@@ -119,6 +126,15 @@ class Config extends Options
     
     public function createTab($key, $name, $variables){
         $fields = [];
+        if(get('enable_focus_keywords')){
+            $fields[] = [
+                'id'   => $key . '_focus_keywords',
+                'name' => __('Focus keywords', 'xenice-seo'),
+                'desc' => __('For SEO analysis.', 'xenice-seo'),
+                'type'  => 'text',
+                'value' => '',
+            ];
+        }
         if(get('enable_seo_title')){
             $fields[] = [
                 'id'   => $key . '_seo_title',

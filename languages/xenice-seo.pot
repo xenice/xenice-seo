@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xenice SEO\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-17 07:27+0000\n"
+"POT-Creation-Date: 2024-02-04 11:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -22,62 +22,102 @@ msgstr ""
 msgid "%s permalink"
 msgstr ""
 
+#: analyzer/seo-analyze-page.php:15 analyzer/seo-analyze-page.php:25
+#, php-format
+msgid "<br/>The value is %s."
+msgstr ""
+
+#. Description of the plugin
+msgid "A simple SEO plugin"
+msgstr ""
+
 #: permalink/Config.php:59 permalink/Config.php:81 permalink/Config.php:112
 #: permalink/Config.php:133
 msgid "Default"
 msgstr ""
 
-#: Config.php:65
+#: Config.php:72
 msgid "Default post description"
 msgstr ""
 
-#: Config.php:72
+#: Config.php:79
 msgid "Default post keywords"
 msgstr ""
 
-#: Config.php:79
+#: Config.php:86
 msgid "Default tag&category description"
 msgstr ""
 
-#: Config.php:42
-msgid "Display the meta description edit box"
+#: Config.php:35
+msgid "Display the focus keywords edit box"
 msgstr ""
 
 #: Config.php:49
+msgid "Display the meta description edit box"
+msgstr ""
+
+#: Config.php:56
 msgid "Display the meta keywords edit box"
 msgstr ""
 
-#: Config.php:35
+#: Config.php:42
 msgid "Display the SEO title edit box"
 msgstr ""
 
-#: ConfigTools.php:31
-msgid "Enable sitemap"
+#: Config.php:93
+msgid "Enable seo analyzer"
+msgstr ""
+
+#: analyzer/seo-analyze-page.php:180
+msgid "Error:"
+msgstr ""
+
+#: Config.php:34 Config.php:139 Meta.php:54 TaxMeta.php:36
+msgid "Focus keywords"
+msgstr ""
+
+#: Config.php:140 Meta.php:55 TaxMeta.php:40
+msgid "For SEO analysis."
 msgstr ""
 
 #: Config.php:30
 msgid "General"
 msgstr ""
 
-#: Config.php:97
+#: analyzer/seo-analyze-page.php:208
+msgid "Good:"
+msgstr ""
+
+#: Config.php:111
 msgid "Home"
 msgstr ""
 
-#. URI of the plugin
 #. Author URI of the plugin
-msgid "https://www.xenice.com"
+msgid "https://www.yythemes.com"
 msgstr ""
 
-#: xenice-seo.php:90
+#. URI of the plugin
+msgid "https://www.yythemes.com/plugins/yyseo"
+msgstr ""
+
+#: yyseo-pro.php:90
 msgid "Links"
 msgstr ""
 
-#: Config.php:41 Config.php:134 Meta.php:56 TaxMeta.php:53
+#: Config.php:48 Config.php:157 Meta.php:74 TaxMeta.php:64
 msgid "Meta description"
 msgstr ""
 
-#: Config.php:48 Config.php:144 Meta.php:67 TaxMeta.php:64
+#: Config.php:55 Config.php:167 Meta.php:85 TaxMeta.php:75
 msgid "Meta keywords"
+msgstr ""
+
+#: analyzer/seo-analyze-page.php:217
+msgid "No SEO issues"
+msgstr ""
+
+#: analyzer/seo-analyze-page.php:222
+msgid "No SEO issues were found with the page."
 msgstr ""
 
 #: permalink/Config.php:26 permalink/Config.php:27
@@ -88,40 +128,28 @@ msgstr ""
 msgid "SEO Settings"
 msgstr ""
 
-#: Config.php:34 Config.php:125 TaxMeta.php:36
+#: Config.php:41 Config.php:148 TaxMeta.php:47
 msgid "SEO title"
 msgstr ""
 
-#: Meta.php:46
+#: Meta.php:64
 msgid "Seo title"
 msgstr ""
 
-#: ConfigTools.php:26 ConfigTools.php:27
-msgid "SEO Tools"
-msgstr ""
-
-#: Config.php:135 Meta.php:57 TaxMeta.php:57
+#: Config.php:158 Meta.php:75 TaxMeta.php:68
 msgid "Set the meta description."
 msgstr ""
 
-#: Config.php:145 Meta.php:68 TaxMeta.php:68
+#: Config.php:168 Meta.php:86 TaxMeta.php:79
 msgid "Set the meta keywords. Multiple are separated by commas."
 msgstr ""
 
-#: TaxMeta.php:40
+#: Config.php:149 Meta.php:65 TaxMeta.php:51
 msgid "Set the seo title. Display the default title when empty."
 msgstr ""
 
-#: xenice-seo.php:87 xenice-seo.php:101
+#: yyseo-pro.php:87 yyseo-pro.php:98
 msgid "Settings"
-msgstr ""
-
-#. Description of the plugin
-msgid "Simple SEO"
-msgstr ""
-
-#: ConfigTools.php:32
-msgid "Sitemap url:"
 msgstr ""
 
 #: permalink/Config.php:60 permalink/Config.php:82 permalink/Config.php:113
@@ -133,35 +161,45 @@ msgstr ""
 msgid "Slug width category"
 msgstr ""
 
-#: Config.php:55
+#: Config.php:62
 msgid "Title Separator"
 msgstr ""
 
-#: xenice-seo.php:93
-msgid "Tools"
-msgstr ""
-
-#: Config.php:66
+#: Config.php:73
 msgid "Use the post excerpt as the default meta description"
 msgstr ""
 
-#: Config.php:73
+#: Config.php:80
 msgid "Use the post tags as the default meta keywords"
 msgstr ""
 
-#: Config.php:80
+#: Config.php:87
 msgid "Use the tag&category description as the default meta description"
 msgstr ""
 
-#: Config.php:91 Config.php:103 Meta.php:34 TaxMeta.php:42
+#: Config.php:105 Config.php:117 Meta.php:41 TaxMeta.php:53
 msgid "Variables:"
 msgstr ""
 
-#. Author of the plugin
-msgid "Xenice"
+#: analyzer/seo-analyze-page.php:176
+msgid "Warning:"
+msgstr ""
+
+#: Config.php:94
+msgid ""
+"When enabled, SEO analytics are displayed on the frontend and are only "
+"visible to administrators."
+msgstr ""
+
+#: analyzer/seo-analyze-page.php:145
+msgid "YYSEO Analyzer"
 msgstr ""
 
 #. Name of the plugin
-#: xenice-seo.php:86
-msgid "Xenice SEO"
+#: yyseo-pro.php:86
+msgid "YYSEO Pro"
+msgstr ""
+
+#. Author of the plugin
+msgid "YYThemes"
 msgstr ""

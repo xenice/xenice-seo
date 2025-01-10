@@ -30,6 +30,17 @@ class TaxMeta
         $row = (new Records)->where('object_id', $term_id)->and('type', 'term')->first();
         
     ?>
+    <?php if(get('enable_focus_keywords')):?>
+    <tr class="form-field">
+      <th scope="row">
+        <label for="term_focus_keywords"><?php echo __('Focus keywords', 'xenice-seo') ?></label>
+      </th>
+      <td>
+          <input type="text" name="term_focus_keywords" id="term_focus_keywords"  class="large-text" value="<?php echo $row['focus_keywords']??''?>" ></input>
+          <p><?php echo __('For SEO analysis.', 'xenice-seo') ?></p>
+	  </td>
+    </tr>
+    <?php endif; ?>
     <?php if(get('enable_seo_title')):?>
     <tr class="form-field">
       <th scope="row">
@@ -73,8 +84,9 @@ class TaxMeta
     } 
     
     public function save_fields($term_id){
-        
+
         $data = [];
+        isset($_POST['term_focus_keywords']) && $data['focus_keywords'] = $_POST['term_focus_keywords'];
         isset($_POST['term_seo_title']) && $data['seo_title'] = $_POST['term_seo_title'];
         isset($_POST['term_meta_description']) && $data['meta_description'] = $_POST['term_meta_description'];
         isset($_POST['term_meta_keywords']) && $data['meta_keywords'] = $_POST['term_meta_keywords'];

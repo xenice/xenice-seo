@@ -14,7 +14,7 @@ class Records extends Model
         'id'=>['type'=>'bigint','range'=>'20','primary'=>true,'unique'=>true,'auto'=>true],
         'object_id'=>['type'=>'bigint','range'=>'20'], // post ID， term id
         'type'=>['type'=>'varchar','range'=>'20'], // post or term
-        'core_keywords'=>['type'=>'text','value'=>''],
+        'focus_keywords'=>['type'=>'text','value'=>''],
         'seo_title'=>['type'=>'text','value'=>''], // reserve
         'meta_description'=>['type'=>'text','value'=>''],
         'meta_keywords'=>['type'=>'text','value'=>''],
