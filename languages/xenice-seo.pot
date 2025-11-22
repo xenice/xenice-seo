@@ -1,0 +1,90 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Xenice SEO\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-21 12:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.0; wp-6.8.3; php-8.2.28\n"
+"X-Domain: xenice-seo"
+
+#. Description of the plugin
+msgid ""
+"Add SEO description and keywords fields for posts, pages, categories, custom "
+"post types, and custom taxonomies. Includes homepage SEO and auto "
+"description generation."
+msgstr ""
+
+#: xenice-seo.php:167
+msgid "Auto-generate description"
+msgstr ""
+
+#: xenice-seo.php:164
+msgid "Automatic Description"
+msgstr ""
+
+#: xenice-seo.php:171
+msgid ""
+"Automatically generate a description from the first 150 characters if none "
+"is provided."
+msgstr ""
+
+#: xenice-seo.php:180
+msgid "Homepage Description"
+msgstr ""
+
+#: xenice-seo.php:186
+msgid "Homepage Keywords"
+msgstr ""
+
+#: xenice-seo.php:177
+msgid "Homepage SEO"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.xenice.com/"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://www.xenice.com/xenice-seo"
+msgstr ""
+
+#: xenice-seo.php:193
+msgid "Save Settings"
+msgstr ""
+
+#: xenice-seo.php:55 xenice-seo.php:78 xenice-seo.php:92
+msgid "SEO Description"
+msgstr ""
+
+#: xenice-seo.php:82 xenice-seo.php:96
+msgid "SEO Keywords"
+msgstr ""
+
+#: xenice-seo.php:59
+msgid "SEO Keywords (comma separated)"
+msgstr ""
+
+#: xenice-seo.php:46
+msgid "SEO Settings"
+msgstr ""
+
+#. Author of the plugin
+msgid "Xenice"
+msgstr ""
+
+#. Name of the plugin
+msgid "Xenice SEO"
+msgstr ""
+
+#: xenice-seo.php:160
+msgid "Xenice SEO Settings"
+msgstr ""
